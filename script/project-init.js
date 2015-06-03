@@ -32,9 +32,10 @@ require(['jquery', 'project-init/validate', 'app'], function ($, validate, app) 
 			    }
 			};
 
-
-
-		    projectRef.push(p);
+			if (app && app.authData) {
+				p.user_id = app.authData.uid;
+			}
+			projectRef.push(p);
 		});
 	});
 });
