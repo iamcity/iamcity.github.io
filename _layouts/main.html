@@ -10,14 +10,20 @@
     <script data-main="{{ page.main }}" type="text/javascript" src="/lib/require.js"></script>
 
     <script type="text/javascript">
+        function initialize () {
+            console.log('initialize')
+        }
         require.config({
             baseUrl: "/script",
             shim : {
-                "bootstrap" : { "deps" :['jquery'] }
+                "bootstrap" : { deps :["jquery"] },
+                "google/maps": { exports: ["google"] }
             },
             paths: {
                 "jquery": "/lib/jquery-2.1.4.min",
-                "bootstrap": "/lib/bootstrap.min"
+                "bootstrap": "/lib/bootstrap.min",
+                "async": "/lib/async",
+                "text": "/lib/text"
             }
         });
         require(['bootstrap', 'app']);
