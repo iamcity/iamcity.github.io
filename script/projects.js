@@ -6,8 +6,6 @@ $(function() {
         allProjectsSnapshot.forEach(function(projectSnapshot) {
             var k = projectSnapshot.key();
             var v = projectSnapshot.val();
-            console.log(k);
-            console.log(v);
 
             $("#projectList").append( $("<li></li>").text(v["name"]) );
         }); 
