@@ -1,8 +1,13 @@
 require(['jquery', 'project-init/validate', 'app'], function ($, validate, app) {
 
-    var form = $("[data-project-init-form]");
-    var projectRef = app.firebase.child("web/data/projects");
-    var defaultMessage = 'This field cannot be left blank';
+	var form = $("[data-project-init-form]");
+	var projectRef = app.firebase.child("web/data/projects");
+	var defaultMessage = 'This field cannot be left blank';
+
+        if (app && app.authData && app.authData.facebook) {
+                $("#projectOwner").val(app.authData.facebook.displayName);
+                $("[data-project-owner-missing-alert]").remove();
+        }
 
 	form.on('submit', function (evt) {
 		evt.preventDefault();
@@ -27,14 +32,12 @@ require(['jquery', 'project-init/validate', 'app'], function ($, validate, app) 
 			    name: form.find("[name=projectName]").val(),
 			    description: form.find("[name=projectDescription]").val(),
 			    location: {
-			    	latitude: form.find("[name=projectLatitude]").val(),
-			    	longitude: form.find("[name=projectLongitude]").val()
+				latitude: form.find("[name=projectLatitude]").val(),
+				longitude: form.find("[name=projectLongitude]").val()
 			    }
 			};
 
-			if (app && app.authData) {
-				p.user_id = app.authData.uid;
-			}
+			p.user_id = app.authData.uid;
 			projectRef.push(p);
 		});
 	});

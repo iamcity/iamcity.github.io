@@ -7,6 +7,15 @@ main: project-init
     <form action="/web/data/projects" data-project-init-form>
         <input type="hidden" name="projectLatitude">
         <input type="hidden" name="projectLongitude">
+
+        <div class="form-group has-feedback">
+            <label for="projectOwner" class="control-label">Project Owner</label>
+            <input type="text" class="form-control input-lg" readonly id="projectOwner" data-validate="required">
+            <span class="glyphicon form-control-feedback" aria-hidden="true" data-validation-feedback></span>
+            <p class="help-block" data-feedback-text></p>
+            <div class="alert alert-danger" role="alert" data-project-owner-missing-alert>Please Login before initializing a new project.</div>
+        </div>
+
         <div class="form-group has-feedback">
             <label for="projectName" class="control-label">Name</label>
             <input type="text" class="form-control input-lg" name="projectName" data-validate="required">
