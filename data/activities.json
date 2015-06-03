@@ -1,0 +1,28 @@
+{
+    "activities": [
+        {
+            "user": {
+                "name": "Someone",
+            },
+            "action": {
+                "label": "Took a picture of trash bin"
+            },
+            "location": {
+                "longitude": 4.944633,
+                "latitude": 52.3165773
+            }
+        },
+        {
+            "user": {
+                "name": "Someone",
+            },
+            "action": {
+                "label": "Help an old lady crossing street"
+            },
+            "location": {
+                "longitude": 5.144633,
+                "latitude": 52.3265773
+            }
+        }
+    ]
+}
