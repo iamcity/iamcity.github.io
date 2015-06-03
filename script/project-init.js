@@ -5,21 +5,23 @@ require(['jquery', 'project-init/validate'], function ($, validate) {
 	form.on('submit', function (evt) {
 		evt.preventDefault();
 
-		if (!validate(form)) return;
+		var validation = validate(form);
 
-		var address = form.find('[name=projectAddress]')
+		form.find('.has-error').removeClass('has-error');
 
-		var request = $.ajax({
-			url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address.val()
+		validation.fail(function (data) {
+			$.each(data.failures, function (index, el) {
+				el.closest('.form-group').addClass('has-error');
+			})
 		});
 
-		request.done(function (data) {
+		validation.done(function (data) {
 			var p = {
 			    name: form.find("[name=projectName]").val(),
 			    description: form.find("[name=projectDescription]").val(),
 			    location: {
-			    	latitude: data.results[0].geometry.location.lat,
-			    	longitude: data.results[0].geometry.location.lng
+			    	latitude: form.find("[name=projectLatitude]").val(),
+			    	longitude: form.find("[name=projectLongitude]").val()
 			    }
 			};
 
