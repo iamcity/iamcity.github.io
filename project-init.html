@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>iamcity</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-        <script src="https://cdn.firebase.com/js/client/2.2.6/firebase.js"></script>
-        <script type="text/javascript" src="/lib/require.js"></script>
-        <script type="text/javascript">
-            require.config({
-            baseUrl: "/script"
-            });
-            require(['landing/project-init']);
-        </script>
-
-    </head>
-    <body>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">iamcity.org</a>
-                    <ul class="nav navbar-nav">
-                        <li><a href="/projects.html">Projects to follow</a></li>
-                        <li><a href="/project-init.html">Start a new Project</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container">
-
-            <form id="projectInitForm">
-                <div class="form-group">
-                    <label for="projectName">Name</label>
-                    <input type="text" class="form-control" id="projectName">
-                </div>
-                <div class="form-group">
-                    <label for="projectDescription">Description</label>
-                    <textarea class="form-control" id="projectDescription"></textarea>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Yes
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-        </div>
-    </body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iamcity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src="/lib/require.js"></script>
+  <script type="text/javascript">
+      require.config({baseUrl: "/script"});
+      require(['landing/project-init']);
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/index.html">iamcity.org</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav">
+          <li><a href="/projects.html">Projects to follow</a></li>
+          <li><a href="/project-init.html">Start a new Project</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+      <form id="projectInitForm">
+          <div class="form-group">
+              <label for="projectName">Name</label>
+              <input type="text" class="form-control" id="projectName">
+          </div>
+          <div class="form-group">
+              <label for="projectDescription">Description</label>
+              <textarea class="form-control" id="projectDescription"></textarea>
+          </div>
+          <div class="checkbox">
+              <label>
+                  <input type="checkbox"> Yes
+              </label>
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+  </div>
+</body>
 </html>

@@ -14,7 +14,7 @@
     require.config({
       baseUrl: "/script"
     });
-    require(['landing/map', 'landing/markers']);
+    require(['landing/markers']);
   </script>
 
 </head>
@@ -22,11 +22,19 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-          <a class="navbar-brand" href="/">iamcity.org</a>
-          <ul class="nav navbar-nav">
-              <li><a href="/projects.html">Projects to follow</a></li>
-              <li><a href="/project-init.html">Start a new Project</a></li>
-          </ul>
+        <a class="navbar-brand" href="/index.html">iamcity.org</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav">
+          <li><a href="/projects.html">Projects to follow</a></li>
+          <li><a href="/project-init.html">Start a new Project</a></li>
+        </ul>
       </div>
     </div>
   </nav>

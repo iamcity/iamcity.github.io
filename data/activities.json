@@ -2,7 +2,7 @@
     "activities": [
         {
             "user": {
-                "name": "Someone",
+                "name": "Someone"
             },
             "action": {
                 "label": "Took a picture of trash bin"
@@ -14,7 +14,7 @@
         },
         {
             "user": {
-                "name": "Someone",
+                "name": "Someone"
             },
             "action": {
                 "label": "Help an old lady crossing street"
