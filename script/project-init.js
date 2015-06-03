@@ -28,13 +28,11 @@ require(['jquery', 'project-init/validate', 'app'], function ($, validate, app) 
 		});
 
 		validation.done(function (data) {
+			var location = data.location ? data.location : {}
 			var p = {
 			    name: form.find("[name=projectName]").val(),
 			    description: form.find("[name=projectDescription]").val(),
-			    location: {
-				latitude: form.find("[name=projectLatitude]").val(),
-				longitude: form.find("[name=projectLongitude]").val()
-			    }
+			    location: location
 			};
 
 			p.user = app.authData;

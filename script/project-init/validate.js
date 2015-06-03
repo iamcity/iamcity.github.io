@@ -9,7 +9,6 @@ define(['jquery'], function ($) {
 			var validation = el.data('validate').split(' ');
 			$.each(validation, function (index, validationFunction) {
 				addValidation();
-				// require('validate/' + validationFunction)(el, defer, validationRan);
 				require(['validate/' + validationFunction], function (thing) {
 					thing(el, defer, data, validationRan);
 				});
