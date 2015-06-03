@@ -1,4 +1,4 @@
-$(function() {
+require(['jquery'], function($) {
     var FIREBASE_URL = "https://incandescent-inferno-2819.firebaseio.com/";
     var projectRef = new Firebase( FIREBASE_URL + "/web/data/projects" );
 
@@ -7,7 +7,10 @@ $(function() {
             var k = projectSnapshot.key();
             var v = projectSnapshot.val();
 
-            $("#projectList").append( $("<li></li>").text(v["name"]) );
+            $(function() {
+                $("#projectList").append( $("<li></li>").text(v["name"]) );
+            });
         }); 
     });
 });
+
