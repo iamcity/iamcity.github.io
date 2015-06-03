@@ -1,6 +1,7 @@
-require(['jquery', 'project-init/validate'], function ($, validate) {
-    var FIREBASE_URL = "https://incandescent-inferno-2819.firebaseio.com/";
+require(['jquery', 'project-init/validate', 'app'], function ($, validate, app) {
+
     var form = $("[data-project-init-form]");
+    var projectRef = app.firebase.child("projects");
 
 	form.on('submit', function (evt) {
 		evt.preventDefault();
@@ -25,17 +26,9 @@ require(['jquery', 'project-init/validate'], function ($, validate) {
 			    }
 			};
 
-			var ref = new Firebase( FIREBASE_URL );
-			ref.authAnonymously(function(error, authData) {
-			    if (error) {
-			        // console.log("Login Failed!", error);
-			    } else {
-			        // console.log("Authenticated successfully with payload:", authData);
 
-			        var projectRef = new Firebase( FIREBASE_URL + "/web/data/projects" );
-			        projectRef.push(p);
-			    }
-			});
-		})
+		    
+		    projectRef.push(p);                    
+		});
 	});
 });

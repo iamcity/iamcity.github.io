@@ -6,7 +6,9 @@
 
     <link rel="stylesheet" href="/lib/bootstrap.min.css">
 
+    <script src="https://cdn.firebase.com/js/client/2.2.6/firebase.js"></script>
     <script data-main="{{ page.main }}" type="text/javascript" src="/lib/require.js"></script>
+
     <script type="text/javascript">
         require.config({
             baseUrl: "/script",
@@ -18,9 +20,8 @@
                 "bootstrap": "/lib/bootstrap.min"
             }
         });
-        require(['bootstrap']);
+        require(['bootstrap', 'app', 'facebook']);
     </script>
-    <script src="https://cdn.firebase.com/js/client/2.2.6/firebase.js"></script>
 
 </head>
 <body>
@@ -39,6 +40,8 @@
         <ul class="nav navbar-nav">
           <li><a href="/projects.html">Projects to follow</a></li>
           <li><a href="/project-init.html">Start a new Project</a></li>
+
+          <li><a href="javascript:;" data-facebook-login>Login</a></li>
         </ul>
       </div>
     </div>
