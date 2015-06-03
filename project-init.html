@@ -7,17 +7,23 @@ main: project-init
     <form action="/web/data/projects" data-project-init-form>
         <input type="hidden" name="projectLatitude">
         <input type="hidden" name="projectLongitude">
-        <div class="form-group">
-            <label for="projectName">Name</label>
-            <input type="text" class="form-control" name="projectName" data-validate="required">
+        <div class="form-group has-feedback">
+            <label for="projectName" class="control-label">Name</label>
+            <input type="text" class="form-control input-lg" name="projectName" data-validate="required">
+            <span class="glyphicon form-control-feedback" aria-hidden="true" data-validation-feedback></span>
+            <p class="help-block" data-feedback-text></p>
         </div>
-        <div class="form-group">
-            <label for="projectDescription">Description</label>
+        <div class="form-group has-feedback">
+            <label for="projectDescription" class="control-label">Description</label>
             <textarea class="form-control" name="projectDescription" data-validate="required"></textarea>
+            <span class="glyphicon form-control-feedback" aria-hidden="true" data-validation-feedback></span>
+            <p class="help-block" data-feedback-text></p>
         </div>
-        <div class="form-group">
-            <label for="projectAddress">Address</label>
-            <input type="text" class="form-control" name="projectAddress" data-validate="address">
+        <div class="form-group has-feedback">
+            <label for="projectAddress" class="control-label">Address</label>
+            <input type="text" class="form-control" name="projectAddress" data-validate="address" data-invalid-message="Address not found; check spelling or leave this blank">
+            <span class="glyphicon form-control-feedback" aria-hidden="true" data-validation-feedback></span>
+            <p class="help-block" data-feedback-text></p>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
