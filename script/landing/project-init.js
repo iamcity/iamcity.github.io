@@ -1,7 +1,7 @@
 $(function($) {
     var FIREBASE_URL = "https://incandescent-inferno-2819.firebaseio.com/";
 
-    $("#projectInitForm").on("submit", function() {
+    $("[data-project-init-form]").on("submit", function() {
         console.log("tttt");
         var p = {
             name: $("input#projectName").val(),
@@ -14,7 +14,7 @@ $(function($) {
                 // console.log("Login Failed!", error);
             } else {
                 // console.log("Authenticated successfully with payload:", authData);
-                
+
                 var projectRef = new Firebase( FIREBASE_URL + "/web/data/projects" );
                 projectRef.push(p);
 

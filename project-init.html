@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>iamcity</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-  <script src="https://cdn.firebase.com/js/client/2.2.6/firebase.js"></script>
-  <script type="text/javascript" src="/lib/require.js"></script>
-  <script type="text/javascript">
-      require.config({baseUrl: "/script"});
-      require(['landing/project-init']);
-  </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iamcity</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <script data-main="project-init" type="text/javascript" src="/lib/require.js"></script>
+    <script type="text/javascript">
+        require.config({baseUrl: "/script"});
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.6/firebase.js"></script>
+
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -34,23 +35,24 @@
       </div>
     </div>
   </nav>
-  <div class="container">
-      <form id="projectInitForm">
-          <div class="form-group">
-              <label for="projectName">Name</label>
-              <input type="text" class="form-control" id="projectName">
-          </div>
-          <div class="form-group">
-              <label for="projectDescription">Description</label>
-              <textarea class="form-control" id="projectDescription"></textarea>
-          </div>
-          <div class="checkbox">
-              <label>
-                  <input type="checkbox"> Yes
-              </label>
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-  </div>
+    <div class="container">
+        <form data-project-init-form>
+        <input type="hidden" name="projectLatitude">
+        <input type="hidden" name="projectLongitude">
+            <div class="form-group">
+                <label for="projectName">Name</label>
+                <input type="text" class="form-control" id="projectName" name="projectName">
+            </div>
+            <div class="form-group">
+                <label for="projectDescription">Description</label>
+                <textarea class="form-control" id="projectDescription" name="projectDescription"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="projectAddress">Address</label>
+                <input type="text" class="form-control" id="projectAddress" name="projectAddress">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
