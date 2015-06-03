@@ -1,7 +1,7 @@
 require(['jquery', 'app'], function($, app) {
 
     $(function(){
-        if (app.authData) {
+        if (app.authData && app.authData.facebook ) {
             $("[data-facebook-login]").text( app.authData.facebook.displayName );
         } else {
             $("[data-facebook-login]").on("click", function(evt) {
