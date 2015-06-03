@@ -1,7 +1,7 @@
 define([ window ], function () {
     var app = window.app = {};
 
-    var FIREBASE_URL = "https://incandescent-inferno-2819.firebaseio.com/web/data";
+    var FIREBASE_URL = "https://incandescent-inferno-2819.firebaseio.com/";
     app.firebase = new Firebase( FIREBASE_URL );
     app.authData = null;
 

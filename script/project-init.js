@@ -1,7 +1,7 @@
 require(['jquery', 'project-init/validate', 'app'], function ($, validate, app) {
 
     var form = $("[data-project-init-form]");
-    var projectRef = app.firebase.child("projects");
+    var projectRef = app.firebase.child("web/data/projects");
     var defaultMessage = 'This field cannot be left blank';
 
 	form.on('submit', function (evt) {
