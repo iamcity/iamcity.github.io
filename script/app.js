@@ -6,7 +6,7 @@ define(['jquery'], function ($) {
     app.authData = null;
 
     app.firebase.onAuth(function(authData) {
-        if (authData) {
+        if (authData && authData.facebook) {
             app.authData = authData;
             $("[data-facebook-login]").text( app.authData.facebook.displayName );
         }
