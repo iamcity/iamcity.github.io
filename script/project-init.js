@@ -38,7 +38,8 @@ require(['jquery', 'project-init/validate', 'app'], function ($, validate, app) 
 			};
 
 			p.user = app.authData;
-			projectRef.push(p);
+			var pref = projectRef.push(p);
+			location.href = "/project.html?key=" + pref.key();
 		});
 	});
 });
