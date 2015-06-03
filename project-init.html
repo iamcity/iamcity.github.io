@@ -8,10 +8,18 @@
 
     <script data-main="project-init" type="text/javascript" src="/lib/require.js"></script>
     <script type="text/javascript">
-        require.config({baseUrl: "/script"});
+        require.config({
+            baseUrl: "/script",
+            shim : {
+                "bootstrap" : { "deps" :['jquery'] }
+            },
+            paths: {
+                "jquery": "/lib/jquery-2.1.4.min",
+                "bootstrap": "/lib/bootstrap.min"
+            }
+        });
+        require(['bootstrap']);
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.6/firebase.js"></script>
 
 </head>
@@ -39,11 +47,11 @@
         <form data-project-init-form>
             <div class="form-group">
                 <label for="projectName">Name</label>
-                <input type="text" class="form-control" name="projectName">
+                <input type="text" class="form-control" name="projectName" data-required>
             </div>
             <div class="form-group">
                 <label for="projectDescription">Description</label>
-                <textarea class="form-control" name="projectDescription"></textarea>
+                <textarea class="form-control" name="projectDescription" data-required></textarea>
             </div>
             <div class="form-group">
                 <label for="projectAddress">Address</label>

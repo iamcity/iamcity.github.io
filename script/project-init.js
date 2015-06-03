@@ -1,9 +1,11 @@
-require(['jquery'], function ($) {
+require(['jquery', 'project-init/validate'], function ($, validate) {
     var FIREBASE_URL = "https://incandescent-inferno-2819.firebaseio.com/";
     var form = $("[data-project-init-form]");
 
 	form.on('submit', function (evt) {
 		evt.preventDefault();
+
+		if (!validate(form)) return;
 
 		var address = form.find('[name=projectAddress]')
 
