@@ -1,0 +1,17 @@
+<div>
+	<form action="/actions" data-action-form>
+		<div class="form-group has-feedback">
+			<label class="control-label" for="actionTitle">Title</label>
+			<input type="text" class="form-control" name="title" data-validate="required" id="actionTitle">
+			<span class="glyphicon form-control-feedback" aria-hidden="true" data-validation-feedback></span>
+			<p class="help-block" data-feedback-text></p>
+		</div>
+		<div class="form-group has-feedback">
+			<label class="control-label" for="actionDescription">Description</label>
+			<textarea class="form-control" name="description" data-validate="required" id="actionDescription"></textarea>
+			<span class="glyphicon form-control-feedback" aria-hidden="true" data-validation-feedback></span>
+			<p class="help-block" data-feedback-text></p>
+		</div>
+		<button type="submit" class="btn btn-default">Create</button>
+	</form>
+</div>

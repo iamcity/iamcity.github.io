@@ -1,6 +1,6 @@
 require(['jquery'], function($) {
-    var FIREBASE_URL = "https://incandescent-inferno-2819.firebaseio.com/";
-    var projectRef = new Firebase( FIREBASE_URL + "/web/data/projects" );
+    var FIREBASE_URL = "https://iamcity.firebaseio.com/";
+    var projectRef = new Firebase( FIREBASE_URL );
 
     var template = $('[data-project-list-item-template] > [data-template]');
     var scale = window.devicePixelRatio ? window.devicePixelRatio.toString() : '1';
@@ -16,7 +16,7 @@ require(['jquery'], function($) {
             html.find('[data-title]').html(v.name);
             html.find('[data-description]').html(v.description);
             html.find('[data-project-link]').attr({href: '/project.html?key=' + k});
-            if (v.location.latitude) {
+            if (v.location && v.location.latitude) {
                 html.find('[data-image]').attr({
                     src: 'https://maps.googleapis.com/maps/api/staticmap'
                         + '?markers=' + [v.location.latitude, v.location.longitude].join(',')

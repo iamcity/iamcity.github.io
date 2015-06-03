@@ -4,10 +4,11 @@ main: project
 ---
 
 <div class="container">
-    <div data-project>
-        <h3>{{Project Name}}</h3>
-        <div data-project-owner>{{Project Owner}}</div>
-        <div data-project-description>{{Project Description}}</div>
-        <div data-project-participants>{{Project Participants}}</div>
+    <div class="hidden" data-project>
+        <h3 data-title></h3>
+        <p data-project-owner></p>
+        <p data-project-description></p>
+        <div data-project-actions></div>
+    	{% include project-action-form.html %}
     </div>
 </div>

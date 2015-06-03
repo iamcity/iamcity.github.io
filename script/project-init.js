@@ -1,13 +1,13 @@
 require(['jquery', 'project-init/validate', 'app'], function ($, validate, app) {
 
 	var form = $("[data-project-init-form]");
-	var projectRef = app.firebase.child("web/data/projects");
+	var projectRef = app.firebase;
 	var defaultMessage = 'This field cannot be left blank';
 
-        if (app && app.authData && app.authData.facebook) {
-                $("#projectOwner").val(app.authData.facebook.displayName);
-                $("[data-project-owner-missing-alert]").remove();
-        }
+	if (app && app.authData && app.authData.facebook) {
+		$("#projectOwner").val(app.authData.facebook.displayName);
+		$("[data-project-owner-missing-alert]").remove();
+	}
 
 	form.on('submit', function (evt) {
 		evt.preventDefault();
@@ -30,9 +30,9 @@ require(['jquery', 'project-init/validate', 'app'], function ($, validate, app) 
 		validation.done(function (data) {
 			var location = data.location ? data.location : {}
 			var p = {
-			    name: form.find("[name=projectName]").val(),
-			    description: form.find("[name=projectDescription]").val(),
-			    location: location
+				name: form.find("[name=projectName]").val(),
+				description: form.find("[name=projectDescription]").val(),
+				location: location
 			};
 
 			p.user = app.authData;
