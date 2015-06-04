@@ -19,7 +19,7 @@ require(
             pdiv.find("[data-project-description]").text( pv.description );
             pdiv.removeClass('hidden');
             actionCreation($('[data-action-form]'), p);
-            actionList($('[data-project-action-list]'), p.child('actions'));
+            actionList($('[data-project-action-list]'), p.child('actions'), p);
         });
     }
 );
