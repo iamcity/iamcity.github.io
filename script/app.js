@@ -1,7 +1,7 @@
 define(['jquery'], function ($) {
     var app = window.app = {};
 
-    var FIREBASE_URL = "https://incandescent-inferno-2819.firebaseio.com/";
+    var FIREBASE_URL = "https://iamcity.firebaseio.com/";
     app.firebase = new Firebase( FIREBASE_URL );
     app.authData = null;
 
