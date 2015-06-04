@@ -29,7 +29,7 @@
             },
 	    "icon": {
 		"file": "imgs/garbage.png",
-		"size": 70
+		"size": 50
 	    }
         },
 	{
@@ -45,8 +45,129 @@
             },
 	    "icon": {
 		"file": "imgs/pollution.png",
+		"size": 50
+	    }
+        },
+	
+	{
+            "user": {
+                "name": "Someone"
+            },
+            "action": {
+                "label": "Feed the Duck"
+            },
+            "location": {
+                "longitude": 4.88176516,
+                "latitude":52.3427905
+            },
+	    "icon": {
+		"file": "imgs/ducks.png",
 		"size": 100
 	    }
-        }
+        },
+	
+	{
+            "user": {
+		"name": "Someone"
+            },
+            "action": {
+		"label": "Feed the Duck"
+            },
+            "location": {
+		"longitude": 4.868608415,
+		"latitude":52.3582088
+	    },
+	    "icon": {
+		"file": "imgs/ducks.png",
+		"size": 60
+	    }
+	},
+
+
+	{
+	    "user": {
+		"name": "Someone"
+	    },
+	    "action": {
+		"label": "hacker’s mess"
+	    },
+	    "location": {
+		"longitude": 4.94196417,
+		"latitude":52.314371
+	    },
+	    "icon": {
+		"file": "imgs/arena.png",
+		"size": 200
+	    }
+	},
+
+	{
+	    "user": {
+		"name": "Someone"
+	    },
+	    "action": {
+		"label": "other mess"
+	    },
+	    "location": {
+		"longitude": 4.90027217,
+		"latitude":52.379128
+	    },
+	    "icon": {
+		"file": "imgs/garbage.png",
+		"size": 90
+	    }
+	},
+
+
+	{
+	    "user": {
+		"name": "Someone"
+	    },
+	    "action": {
+		"label": "other mess"
+	    },
+	    "location": {
+		"longitude": 4.87398417,
+		"latitude":52.340263
+	    },
+	    "icon": {
+		"file": "imgs/garbage.png",
+		"size": 20
+	    }
+	},
+
+	{
+	    "user": {
+		"name": "Someone"
+	    },
+	    "action": {
+		"label": "pollution"
+	    },
+	    "location": {
+		"longitude": 4.865768317,
+		"latitude":52.3335649
+	    },
+	    "icon": {
+		"file": "imgs/pollution.png",
+		"size": 100
+	    }
+	},
+	
+	{
+	    "user": {
+		"name": "Someone"
+	    },
+	    "action": {
+		"label": "pollution"
+	    },
+	    "location": {
+		"longitude": 4.90027217,
+		"latitude":52.37868840
+	    },
+	    "icon": {
+		"file": "imgs/pollution.png",
+		"size": 50
+	    }
+	}
     ]
 }

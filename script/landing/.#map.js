@@ -1,1 +1,0 @@
-Stan@Stanislavs-MacBook-Air.local.994
