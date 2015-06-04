@@ -10,7 +10,11 @@
             "location": {
                 "longitude": 4.944633,
                 "latitude": 52.3165773
-            }
+            },
+	    "icon": {
+		"file": "imgs/ducks.png",
+		"size": 50
+	    }
         },
         {
             "user": {
@@ -22,7 +26,27 @@
             "location": {
                 "longitude": 5.144633,
                 "latitude": 52.3265773
-            }
+            },
+	    "icon": {
+		"file": "imgs/garbage.png",
+		"size": 70
+	    }
+        },
+	{
+            "user": {
+                "name": "Someone"
+            },
+            "action": {
+                "label": "Install an air sensor outside your window"
+            },
+            "location": {
+                "longitude": 5.144633,
+                "latitude": 52.2365773
+            },
+	    "icon": {
+		"file": "imgs/pollution.png",
+		"size": 100
+	    }
         }
     ]
 }
